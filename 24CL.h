@@ -14,9 +14,11 @@ class EEPROM24LC
   {
     public:
        EEPROM24LC(byte);
+       void writeWire64(uint16_t num, byte arr_data[], byte dl);
        void writeWire(uint16_t num, byte data);
        byte readWire(uint16_t num);
     private:
        int ADDR;
+       byte i;
   };
 #endif
