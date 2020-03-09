@@ -12,7 +12,7 @@ void EEPROM24LC::writeWire(uint16_t num, byte data){
         Wire.write(num & 0xFF);
         Wire.write(data); 
         Wire.endTransmission();
-        delay(1);
+        delay(5);
 }
 
 byte EEPROM24LC::readWire(uint16_t num){
