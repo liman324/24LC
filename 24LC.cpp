@@ -27,15 +27,3 @@ byte EEPROM24LC::readWire(uint16_t num){
         delay(1);
         return value;
 }
-
-void EEPROM24LC::writeWire64(uint16_t num, byte arr_data[], byte dl){
-        Wire.beginTransmission(ADDR);
-        Wire.write(num >> 8); 
-        Wire.write(num & 0xFF);
-        for(i=0;i<dl;i++){
-        Wire.write(arr_data[i]);
-        delay(1);
-}
-        Wire.endTransmission();
-        delay(5);
-}
